@@ -1,11 +1,19 @@
 (function() {
-    angular.module('app.controllers.home', []).controller('HomeController', ['$scope', '$log', HomeController]);
+    angular.module('app.controllers.home', []).controller('HomeController', ['$scope', '$log', 'credentials', HomeController]);
 
-    function HomeController($scope, $log) {
-        $log.debug('home controller');
+    function HomeController($scope, $log, credentials) {
+
         $scope.greeting = {
-            id : 'Some Greeting Id',
-            content : 'Some Greeting Content'
+            id : credentials.username,
+            pass : credentials.password
         }
+
+        $scope.$on('$viewContentLoaded', function() {
+            $log.debug("Home controller content is loaded")
+        });
+
+        $scope.$on('$destroy', function() {
+            $log.debug("Home controller is destroyed");
+        });
     }
 })();
