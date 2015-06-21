@@ -14,12 +14,17 @@
         <dependency>
             <groupId>org.webjars.bower</groupId>
             <artifactId>angularjs</artifactId>
-            <version>1.4.0-rc.1</version>
+            <version>1.4.0</version>
         </dependency>
         <dependency>
             <groupId>org.webjars.bower</groupId>
             <artifactId>angular-route</artifactId>
-            <version>1.4.0-rc.1</version>
+            <version>1.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.bower</groupId>
+            <artifactId>angular-touch</artifactId>
+            <version>1.4.0</version>
         </dependency>
     </dependencies>
 
