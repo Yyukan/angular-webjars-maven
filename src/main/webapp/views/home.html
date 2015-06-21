@@ -1,8 +1,22 @@
-<h1>Greeting</h1>
-<div ng-show="authenticated">
-    <p>The username is: {{ greeting.id }}</p>
-    <p>The password is: {{ greeting.pass }}</p>
+
+<div>
+    <menu></menu>
+    <div ng-swipe-left="showmenu=false">
+        <div id="menuContent" ng-class="{showLeftMenu: showmenu}">
+            <div id="navigationBar">
+                <a class="showMenuToggle" ng-click="toggleMenu();">&#9776;</a> Home
+            </div>
+            <div style="border:1px solid black;">
+                <h2>Greeting</h2>
+                <div ng-show="authenticated">
+                    <p>The username is: {{ greeting.id }}</p>
+                    <p>The password is: {{ greeting.pass }}</p>
+                </div>
+                <div  ng-show="!authenticated">
+                    <p>Login to see your greeting</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div  ng-show="!authenticated">
-    <p>Login to see your greeting</p>
-</div>
+
