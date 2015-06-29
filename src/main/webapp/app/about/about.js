@@ -4,7 +4,7 @@
     function AboutController($scope, $log, credentials) {
 
         // flag which controls menu appearing
-        $scope.showmenu=false;
+        $scope.showmenu=true;
 
         //this is the toggle function
         $scope.toggleMenu = function(){
