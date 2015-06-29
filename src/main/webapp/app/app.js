@@ -29,14 +29,6 @@ angular.module('app', ['ngRoute', 'ngTouch', 'app.controllers', 'app.services'])
         }).otherwise('/');
 
 }])
-.factory('credentials', function() {
-    var credentials = {
-        username : 'somename',
-        password : 'somepass'
-    };
-
-    return credentials;
-})
 .directive('menu', function() {
         console.log('compile function');
 
@@ -55,9 +47,10 @@ angular.module('app', ['ngRoute', 'ngTouch', 'app.controllers', 'app.services'])
             templateUrl: 'views/menu.html'
         };
     })
-.run(function($location, $rootScope) {
-        if (!$rootScope.authenticated)
+.run(function($log, $location, AuthService) {
+        if (!AuthService.authenticated)
         {
+            $log.debug("App run");
             $location.path("/login");
         }
 });

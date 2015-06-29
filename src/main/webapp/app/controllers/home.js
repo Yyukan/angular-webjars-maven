@@ -5,7 +5,7 @@
     function HomeController($scope, $log, AuthService) {
 
         // flag which controls menu appearing
-        $scope.showmenu = false;
+        $scope.showmenu = true;
 
         //this is the toggle function
         $scope.toggleMenu = function() {
