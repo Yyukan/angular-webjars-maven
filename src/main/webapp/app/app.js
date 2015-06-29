@@ -3,7 +3,18 @@
 //
 'use strict';
 
-angular.module('app', ['ngRoute', 'ngTouch', 'app.controllers']).
+//
+// Application services 
+//
+angular.module('app.services', ['app.services.auth']);
+
+//
+// Application controllers
+//
+angular.module('app.controllers', ['app.controllers.home', 'app.controllers.login', 'app.controllers.about']);
+
+
+angular.module('app', ['ngRoute', 'ngTouch', 'app.controllers', 'app.services']).
     config(['$routeProvider', function($routeProvider) {
 
         $routeProvider.when('/home', {

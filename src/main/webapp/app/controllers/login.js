@@ -1,16 +1,13 @@
 (function() {
-    angular.module('app.controllers.login', []).controller('LoginController', ['$rootScope', '$scope', '$log', '$location', 'credentials', LoginController]);
+    angular.module('app.controllers.login', []).controller('LoginController',
+    ['$scope', '$log', 'AuthService', LoginController]);
 
-    function LoginController($rootScope, $scope, $log, $location, credentials) {
+    function LoginController($scope, $log, AuthService) {
 
-        $scope.credentials = credentials;
+        $scope.credentials = AuthService.credentials;
 
         $scope.login = function() {
-            $log.debug('Function login() is called');
-
-            $rootScope.authenticated = true;
-
-            $location.path("/home");
+            AuthService.login($scope.credentials);
         };
 
         $scope.$on('$viewContentLoaded', function() {

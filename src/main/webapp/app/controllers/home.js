@@ -1,21 +1,24 @@
 (function() {
-    angular.module('app.controllers.home', []).controller('HomeController', ['$scope', '$log', '$location', 'credentials', HomeController]);
+    angular.module('app.controllers.home', []).controller('HomeController',
+    ['$scope', '$log', 'AuthService', HomeController]);
 
-    function HomeController($scope, $log, $location, credentials) {
+    function HomeController($scope, $log, AuthService) {
 
         // flag which controls menu appearing
-        $scope.showmenu=false;
+        $scope.showmenu = false;
 
         //this is the toggle function
-        $scope.toggleMenu = function(){
-            $scope.showmenu=($scope.showmenu) ? false : true;
+        $scope.toggleMenu = function() {
+            $scope.showmenu = ($scope.showmenu) ? false : true;
             $log.debug("Menu is shown:" + $scope.showmenu);
         }
 
         $scope.greeting = {
-            id : credentials.username,
-            pass : credentials.password
+            id : AuthService.credentials.username,
+            pass : AuthService.credentials.password
         }
+
+        $scope.authenticated = AuthService.authenticated;
 
         $scope.$on('$viewContentLoaded', function() {
             $log.debug("Home controller content is loaded")
