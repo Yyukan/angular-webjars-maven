@@ -12,9 +12,9 @@
             replace: true,
             scope: {
             },
-            controller: function($scope) {
+            controller: ['$scope', function($scope) {
                 $scope.version = configuration.version;
-            },
+            }],
             link: function($scope, $element) {
                console.log('Link function');
             },

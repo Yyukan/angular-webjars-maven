@@ -43,10 +43,10 @@ angular.module('app', ['ngRoute', 'ngTouch', 'app.configuration', 'app.controlle
         }).otherwise('/');
 
 }])
-.run(function($log, $location, AuthService) {
+.run(['$log', '$location', 'AuthService', function($log, $location, AuthService) {
         if (!AuthService.authenticated)
         {
             $log.debug("App run");
             $location.path("/login");
         }
-});
+}]);

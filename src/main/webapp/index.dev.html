@@ -13,7 +13,7 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="apple-mobile-web-app-title" content="AC" />
 
-        <link rel="styleSheet" href="css/style.min.css" />
+        <link rel="styleSheet" href="css/app.css" />
 
         <title>Angular Mobile App Seed</title>
     </head>
@@ -21,12 +21,18 @@
 
         <div ng-view></div>
 
-        <!-- Angular dependency as webjar -->
-        <script src="webjars/angularjs/1.4.0/angular.min.js"></script>
-        <script src="webjars/angular-route/1.4.0/angular-route.min.js"></script>
-        <script src="webjars/angular-touch/1.4.0/angular-touch.min.js"></script>
+        <!-- Angular direct dependency -->
+        <script src="http://code.angularjs.org/1.4.0/angular.js"></script>
+        <script src="http://code.angularjs.org/1.4.0/angular-route.js"></script>
+        <script src="http://code.angularjs.org/1.4.0/angular-touch.js"></script>
+
 
         <!-- Application scripts -->
-        <script src="app/script.min.js"></script>
+        <script src="app/about/about.js"></script>
+        <script src="app/home/home.js"></script>
+        <script src="app/auth/login.js"></script>
+        <script src="app/auth/auth.js"></script>
+        <script src="app/menu/menu.js"></script>
+        <script src="app/app.js"></script>
     </body>
 </html>

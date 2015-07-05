@@ -4,7 +4,7 @@
 (function() {
     angular.module('app.controllers.about', []).controller('AboutController', ['$scope', '$log', AboutController]);
 
-    function AboutController($scope, $log, credentials) {
+    function AboutController($scope, $log) {
 
         // flag which controls menu appearing
         $scope.showmenu=true;
