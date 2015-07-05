@@ -6,9 +6,9 @@ Simple mobile application seed with login form and sliding menu
 How to develop
 --------------
 
-cd src/main/webapp
-python -m SimpleHTTPServer
-http://localhost:8000/index.dev.html
+cd src/main/webapp; python -m SimpleHTTPServer
+
+Go in the browser http://localhost:8000/index.dev.html
 
 
 How to make production build
