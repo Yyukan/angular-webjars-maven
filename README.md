@@ -1,4 +1,4 @@
-Angular webjars maven
----------------------
+Angular Mobile Seed
+-------------------
 
-Angular webjar maven integration
+Simple mobile application seed with login form and sliding menu
