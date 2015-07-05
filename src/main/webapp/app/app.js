@@ -4,6 +4,13 @@
 'use strict';
 
 //
+// Application configuration
+//
+angular.module('app.configuration', []).constant("configuration", {
+    'version' : '0.0.1'
+});
+
+//
 // Application services 
 //
 angular.module('app.services', ['app.services.auth']);
@@ -21,7 +28,7 @@ angular.module('app.directives', ['app.directives.menu']);
 //
 // Application config and run
 //
-angular.module('app', ['ngRoute', 'ngTouch', 'app.controllers', 'app.services', 'app.directives']).
+angular.module('app', ['ngRoute', 'ngTouch', 'app.configuration', 'app.controllers', 'app.services', 'app.directives']).
     config(['$routeProvider', function($routeProvider) {
 
         $routeProvider.when('/home', {
