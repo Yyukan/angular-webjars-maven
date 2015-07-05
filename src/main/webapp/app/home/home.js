@@ -1,3 +1,6 @@
+//
+// Controller of the 'Home' view
+//
 (function() {
     angular.module('app.controllers.home', []).controller('HomeController',
     ['$scope', '$log', 'AuthService', HomeController]);

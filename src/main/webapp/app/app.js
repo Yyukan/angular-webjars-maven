@@ -13,40 +13,29 @@ angular.module('app.services', ['app.services.auth']);
 //
 angular.module('app.controllers', ['app.controllers.home', 'app.controllers.login', 'app.controllers.about']);
 
+//
+// Application directives
+//
+angular.module('app.directives', ['app.directives.menu']);
 
-angular.module('app', ['ngRoute', 'ngTouch', 'app.controllers', 'app.services']).
+//
+// Application config and run
+//
+angular.module('app', ['ngRoute', 'ngTouch', 'app.controllers', 'app.services', 'app.directives']).
     config(['$routeProvider', function($routeProvider) {
 
         $routeProvider.when('/home', {
-            templateUrl : 'views/home.html',
+            templateUrl : 'app/home/home.html',
             controller : 'HomeController'
         }).when('/login', {
-            templateUrl : 'views/login.html',
+            templateUrl : 'app/auth/login.html',
             controller : 'LoginController'
         }).when('/about', {
-            templateUrl : 'views/about.html',
+            templateUrl : 'app/about/about.html',
             controller : 'AboutController'
         }).otherwise('/');
 
 }])
-.directive('menu', function() {
-        console.log('compile function');
-
-        return {
-            restrict: 'E',
-            replace: true,
-            scope: {
-                loc: '@location',
-                menus: '='
-            },
-            link: function($scope, $element) {
-               console.log('Link function');
-
-
-            },
-            templateUrl: 'views/menu.html'
-        };
-    })
 .run(function($log, $location, AuthService) {
         if (!AuthService.authenticated)
         {

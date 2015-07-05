@@ -1,3 +1,6 @@
+//
+// Controller of the 'Login' form
+//
 (function() {
     angular.module('app.controllers.login', []).controller('LoginController',
     ['$scope', '$log', 'AuthService', LoginController]);

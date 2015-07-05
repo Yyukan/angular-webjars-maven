@@ -1,3 +1,6 @@
+//
+// Service for authentication
+//
 (function() {
     angular.module('app.services.auth', []).service('AuthService', ['$log', '$location', AuthService]);
 

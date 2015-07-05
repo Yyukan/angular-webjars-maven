@@ -1,3 +1,6 @@
+//
+// Controller of the 'About' view
+//
 (function() {
     angular.module('app.controllers.about', []).controller('AboutController', ['$scope', '$log', AboutController]);
 
