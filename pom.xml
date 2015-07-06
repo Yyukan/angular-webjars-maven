@@ -71,6 +71,7 @@
                                     </jsSourceIncludes>
                                     <jsSourceExcludes>
                                         <jsSourceExclude>**/*.min.js</jsSourceExclude>
+                                        <jsSourceExclude>app/config.js</jsSourceExclude>
                                     </jsSourceExcludes>
                                     <jsEngine>CLOSURE</jsEngine>
                                 </configuration>
@@ -86,8 +87,7 @@
                         <artifactId>maven-war-plugin</artifactId>
                         <version>2.6</version>
                         <configuration>
-                            <warSourceExcludes>**/*.css,**/*.js</warSourceExcludes>
-                            <packagingExcludes>css/style.css,app/script.js,index.dev.html</packagingExcludes>
+                            <packagingIncludes>css/style.min.css,app/script.min.js,app/config.js,index.html,WEB-INF/**/*</packagingIncludes>
                         </configuration>
                     </plugin>
                 </plugins>

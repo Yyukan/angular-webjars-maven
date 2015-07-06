@@ -6,14 +6,7 @@
 
     function AboutController($scope, $log) {
 
-        // flag which controls menu appearing
-        $scope.showmenu=true;
-
-        //this is the toggle function
-        $scope.toggleMenu = function(){
-            $scope.showmenu=($scope.showmenu) ? false : true;
-            $log.debug("Menu is shown:" + $scope.showmenu);
-        }
+        $log.debug('AboutController init');
 
         $scope.$on('$viewContentLoaded', function() {
             $log.debug("About controller content is loaded")

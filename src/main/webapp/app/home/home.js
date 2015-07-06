@@ -7,14 +7,7 @@
 
     function HomeController($scope, $log, AuthService) {
 
-        // flag which controls menu appearing
-        $scope.showmenu = true;
-
-        //this is the toggle function
-        $scope.toggleMenu = function() {
-            $scope.showmenu = ($scope.showmenu) ? false : true;
-            $log.debug("Menu is shown:" + $scope.showmenu);
-        }
+        $log.debug('HomeController init');
 
         $scope.greeting = {
             id : AuthService.credentials.username,

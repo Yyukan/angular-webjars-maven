@@ -1,10 +1,10 @@
 
 <div>
     <menu></menu>
-    <div ng-swipe-left="showmenu=false">
-        <div id="menuContent" ng-class="{showLeftMenu: showmenu}">
+    <div ng-swipe-left="menu.show=false">
+        <div id="menuContent" ng-class="{showLeftMenu: menu.show}">
             <div id="navigationBar">
-                <a class="showMenuToggle" ng-click="toggleMenu();">&#9776;</a> Home
+                <a class="showMenuToggle" ng-click="menu.show = !menu.show">&#9776;</a> Home
             </div>
             <div style="border:1px solid black;">
                 <h2>Greeting</h2>
